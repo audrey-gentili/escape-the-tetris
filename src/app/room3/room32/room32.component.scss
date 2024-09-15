@@ -1,0 +1,214 @@
+.container {
+    background-image: url("/assets/Rooms/room32.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.rightCode {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(#5a5a5a, 0.8);
+    border-radius: 10px;
+    height: 10vh;
+    width: 20vw;
+    top: 3vh;
+    left: 40vw;
+}
+
+.p1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 66%;
+}
+
+.p2 {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 75%;
+}
+
+.leftCode {
+    position: absolute;
+    left:10%;
+    font-size: 35px;
+    top: 25%;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.flecheRet {
+    position: absolute;
+    height: 5vh;
+    top: 90vh;
+    left: 47.5%;
+}
+
+.flecheRet:hover { 
+    cursor: URL("/assets/cursor.png"), auto;
+}
+
+.boulette {
+    position: absolute;
+    background-color: transparent;
+    height: 8vh;
+    width: 6vw;
+    top: 65vh;
+    left: 81.5vw;
+    cursor: default;
+}
+
+.screen {
+    position: absolute;
+    background-color: transparent;
+    height: 16vh;
+    width: 14.6vw;
+    top: 20.8vh;
+    left: 43.5vw;
+    cursor: default;
+}
+
+.lock {
+    position: absolute;
+    background-color: transparent;
+    height: 23%;
+    width: 6.5vw;
+    top: 50.2%;
+    left: 50.5vw;
+    cursor: default;
+}
+  
+.code {
+    position: relative;
+    height: 90vh;
+    width: fit-content;
+    top:5vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    img {
+        height: 100%;
+    }
+}
+
+.screenlock {
+    position: relative;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    top: 15vh;
+    img{
+        width: 60vw;
+        height: 70vh;
+    }
+}
+
+.ecran {
+    display: flex;
+    align-content: center;
+    width: 60vw;
+}
+
+.text {
+    position: absolute;
+    top: 50.2%;
+    left: 3.5vw;
+    height: 23%;
+    width: 45.5vw;
+    font-size: 70px;
+    caret-color: transparent;
+}
+
+.desktop {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    top: 15vh;
+    left: 20vw;
+    .bureau {
+        top: 0;
+        left:0;
+        width: 60vw;
+        height: 70vh;
+    }
+}
+
+.bureau {
+    display: flex;
+    align-content: center;
+    width: 60vw;
+}
+
+.ff {
+    position: absolute;
+    background-color: transparent;
+    height: 11%;
+    width: 8%;
+    top: 27%;
+    left: 2.9%;
+    cursor: pointer;
+}
+
+.noel {
+    position: absolute;
+    background-color: transparent;
+    height: 11%;
+    width: 8%;
+    top: 47%;
+    left: 2.9%;
+    cursor: pointer;
+}
+
+.shrek {
+    position: absolute;
+    background-color: transparent;
+    height: 11%;
+    width: 8%;
+    top: 47%;
+    left: 13.4%;
+    cursor: pointer;
+}
+
+.pieces {
+    position: absolute;
+    background-color: transparent;
+    height: 11%;
+    width: 8%;
+    top: 68%;
+    left: 2.9%;
+    cursor: pointer;
+}
+
+.lol {
+    position: absolute;
+    background-color: transparent;
+    height: 11%;
+    width: 8%;
+    top: 68%;
+    left: 14.2%;
+    cursor: pointer;
+}
+
+.photo {
+    position: absolute;
+    height: 70%;
+    border: 5px solid black;
+}
+
+.back {
+    position: absolute;
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+}

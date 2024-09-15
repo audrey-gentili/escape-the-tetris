@@ -1,0 +1,139 @@
+.container {
+    background-image: url("/assets/Rooms/room22.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.color {
+    height: 100vh;
+    width: 100vw;
+}
+
+.flecheRet {
+    position: absolute;
+    height: 5vh;
+    top: 90vh;
+    left: 47.5%;
+}
+
+.flecheRet:hover {
+    cursor: URL("/assets/cursor.png"), auto;
+}
+
+.button {
+    position: relative;
+    border-radius: 20px;
+    background: radial-gradient(#cd0000 0%, #b70000 30%, #ae0000 50%, #830000 70%, rgb(75, 0, 0) 100%);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: fit-content;
+    cursor: pointer;
+    margin: auto;
+    top: 50vh;
+}
+
+.button:hover {
+    background: radial-gradient(#cd0000 0%, #c11717 50%, #cc3333 70%, rgb(210, 68, 68) 80%,  rgb(210, 77, 77) 100%);
+    box-shadow: 0px 0px 20px 10px rgba(202, 180, 180, 0.6);
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    font-size: 28px;
+    color: white;
+}
+
+.rightCode {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(#5a5a5a, 0.8);
+    border-radius: 10px;
+    height: 10vh;
+    width: 20vw;
+    top: 3vh;
+    left: 40vw;
+}
+
+.p1 {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 45%;
+}
+
+.p2 {
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    height: 67%;
+}
+
+.leftCode {
+    position: absolute;
+    left:10%;
+    font-size: 35px;
+    top: 25%;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.clicable {
+    cursor: pointer;
+}
+
+.jaune {
+    position: absolute;
+    background-color: transparent;
+    height: 44vh;
+    width: 17vw;
+    top: 11vh;
+    left: 3vw;
+}
+
+.rouge {
+    position: absolute;
+    background-color: transparent;
+    height: 56vh;
+    width: 13.5vw;
+    top: 4vh;
+    left: 82vw;
+}
+
+.vert {
+    position: absolute;
+    background-color: transparent;
+    height: 33vh;
+    width: 26vw;
+    top: 13.5vh;
+    left: 37vw;
+}
+
+.bleu {
+    position: absolute;
+    background-color: transparent;
+    height: 21vh;
+    width: 17vw;
+    top: 65vh;
+    left: 58vw;
+}
+
+.violet {
+    position: absolute;
+    background-color: transparent;
+    height: 21vh;
+    width: 25vw;
+    top: 65vh;
+    left: 20.5vw;
+}

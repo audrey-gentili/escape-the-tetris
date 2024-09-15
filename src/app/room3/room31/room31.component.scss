@@ -1,0 +1,164 @@
+$screen_height: 13.7vh;
+
+#GH {
+  position: absolute;
+  top: 7.2vh;
+  left: 61vw;
+  width: 15.2vw;
+  height: $screen_height;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: 'col1 col2 col3 col4';
+  overflow: hidden;
+  margin: auto;
+
+  #flecheG {
+    position: absolute;
+    width: 100%;
+    bottom: $screen_height;
+    animation: scrollArrow 3s forwards;
+    grid-area: col1;
+  }
+
+  #flecheD {
+    position: absolute;
+    width: 100%;
+    bottom: $screen_height;
+    animation: scrollArrow 3s forwards;
+    grid-area: col3;
+  }
+
+  #flecheH {
+    position: absolute;
+    width: 100%;
+    bottom: $screen_height;
+    animation: scrollArrow 3s forwards;
+    grid-area: col2;
+  }
+
+  #flecheB {
+    position: absolute;
+    width: 100%;
+    bottom: $screen_height;
+    animation: scrollArrow 3s forwards;
+    grid-area: col4;
+  }
+}
+
+#motion1 {
+  position: absolute;
+  top: 7.9vh;
+  left: 23.8vw;
+  width: 15.3vw;
+  height: $screen_height;
+  background-color: transparent;
+  overflow: hidden;
+  margin: auto;
+}
+
+#motion2 {
+  position: absolute;
+  top: 40.2vh;
+  left: 24vw;
+  width: 15.3vw;
+  height: 13vh;
+  background-color: transparent;
+  overflow: hidden;
+  margin: auto;
+}
+
+video {
+  object-fit: fill;
+}
+
+.container {
+    background-image: url("/assets/Rooms/room31.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.button {
+  position: relative;
+  border-radius: 20px;
+  background: radial-gradient(#cd0000 0%, #b70000 30%, #ae0000 50%, #830000 70%, rgb(75, 0, 0) 100%);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: fit-content;
+  cursor: pointer;
+  margin: auto;
+  top: 50vh;
+}
+
+.button:hover {
+  background: radial-gradient(#cd0000 0%, #c11717 50%, #cc3333 70%, rgb(210, 68, 68) 80%,  rgb(210, 77, 77) 100%);
+  box-shadow: 0px 0px 20px 10px rgba(202, 180, 180, 0.6);
+}
+
+.flecheRet {
+    position: absolute;
+    height: 7.5vh;
+    top: 85vh;
+    left: 47.5%;
+}
+
+.flecheRet:hover {
+    cursor: URL("/assets/cursor.png"), auto;
+}
+
+.leftCode {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(#5a5a5a, 0.8);
+  border-radius: 10px;
+  height: 7vh;
+  width: 17vw;
+  top: 3vh;
+  left: 41.8vw;
+}
+
+.p1 {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  left: 3%;
+}
+
+.p2 {
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+  height: 50%;
+}
+
+.rightCode {
+  position: absolute;
+  left: 75%;
+  font-size: 20px;
+  top: 25%;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes scrollArrow {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY($screen_height * 2);
+  }
+}

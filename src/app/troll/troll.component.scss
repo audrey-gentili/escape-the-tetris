@@ -1,0 +1,500 @@
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+$starStartOffset: 600px;
+
+$starOneScrollDuration: 100s;
+$starTwoScrollDuration: 125s;
+$starThreeScrollDuration: 175s;
+$numStarOneStars: 6800;
+$numStarTwoStars: 2800;
+$numStarThreeStars: 800;
+$numComet: 10;
+
+/* classic css */
+.content {
+    background-image: url("/assets/Rooms/troll.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.msgfin {
+    margin-top: 2vh;
+    width: 44.2vw;
+    margin-left: 30.2vw;
+    text-align: center;
+    p {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+.colG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25vw;
+    display: grid;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+}
+
+.colD {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 25vw;
+    display: grid;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    text-align: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(#210068, rgb(10, 0, 30));
+    z-index: -100;
+}
+
+.puzzleBoard {
+    position: absolute;
+    overflow: hidden;
+    width: 44.2vw;
+    height: 40vh;
+    top: 28vh;
+    left: 30.2vw;
+    background-color: rgba(#c1c1c1,0.5);
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 5px;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    .par{
+        position: absolute;
+        color: white;
+        bottom: 40vh;
+        animation: scroll 25s linear;
+    }
+
+    .grille {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        width: 48vh;
+        height: 40vh;
+        background-image: url("/assets/2D/grille.png");
+        background-size: contain;
+        font-family: 'Roboto Mono';
+        text-align: center;
+        animation: scroll 25s linear;
+    }
+
+    #dropzone{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: #210068;
+        z-index: 2;
+    }
+}
+
+#ecranCine {
+    position: absolute;
+    overflow: hidden;
+    width: 44.2vw;
+    height: 40vh;
+    top: 28vh;
+    left: 30.2vw;
+    background-color: transparent;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    
+    #rideau {
+        position: relative;
+        display: grid;
+        grid-template-areas: 
+            'case1 case2 case3 case4'
+            'case5 case6 case7 case8';
+        grid-template-columns: 15% 35% 25% 25%;
+        grid-template-rows: 50% 50%;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        font-family: 'Roboto Mono';
+        text-align: center;
+        #orange{
+            transform: scale(0.7);
+            grid-area: case1;
+        }
+        #rouge {
+            transform: scale(0.7);
+            grid-area: case2;
+        }
+        #bleu_f{
+            transform: scale(0.7);
+            grid-area: case3;
+        }
+        #vert {
+            transform: scale(0.7);
+            grid-area: case4;
+        }
+        #rose {
+            transform: scale(0.7);
+            grid-area: case5;
+        }
+        #bleu_c{
+            transform: scale(0.7);
+            grid-area: case6;
+        }
+        #jaune {
+            transform: scale(0.7);
+            grid-area: case7;
+        }
+        #violet {
+            transform: scale(0.7);
+            grid-area: case8;
+        }
+
+        
+        #orange2{
+            transform: scale(0.7);
+            grid-area: case1;
+            height: 24vh;
+            margin:auto;
+        }
+        #rouge2 {
+            transform: scale(0.7);
+            grid-area: case2;
+            height: 16vh;
+            margin:auto;
+        }
+        #bleu_f2{
+            transform: scale(0.7);
+            grid-area: case3;
+            height: 24vh;
+            margin:auto;
+        }
+        #vert2 {
+            transform: scale(0.7);
+            grid-area: case4;
+            height: 24vh;
+            margin:auto;
+        }
+        #rose2 {
+            transform: scale(0.7);
+            grid-area: case5;
+            height: 8vh;
+            margin:auto;
+        }
+        #bleu_c2{
+            position: relative;
+            width: 40vh;
+            height: 8vh;
+            cursor: move;
+            margin: auto;
+            transform: scale(0.7);
+            grid-area: case6;
+        }
+        #jaune2 {
+            transform: scale(0.7);
+            grid-area: case7;
+            height: 16vh;
+            margin:auto;
+        }
+        #violet2 {
+            transform: scale(0.7);
+            grid-area: case8;
+            height: 24vh;
+            margin:auto;
+        }
+        
+    }
+}
+
+.show {
+    animation: show 10s forwards;
+}
+
+.scrollDown {
+    animation: scrollDown 10s ;
+}
+
+.case {
+    width: 8vh ;
+    height: 8vh ;
+}
+
+@keyframes show {
+    50%{
+        filter: opacity(0);
+    }
+    100%{
+        filter: opacity(1);
+    }
+    
+}
+
+@keyframes scroll {
+    from {
+        transform: translateY(65vh);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes scrollDown {
+    0%{
+        transform: translateY(-45vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.floating {
+	transform: translatey(0px);
+    filter: opacity(0);
+    animation: show 25s forwards, float 6s ease-in-out infinite;
+}
+
+#bleu_f {
+    position: relative;
+    height: 24vh;
+    cursor: move;
+    margin: auto;
+}
+
+#rouge {
+    position: relative;
+    height: 16vh;
+    cursor: move;
+    margin: auto;
+}
+
+#rose {
+    position: relative;
+    height: 8vh;
+    cursor: move;
+    margin: auto;
+}
+
+#violet {
+    position: relative;
+    height: 24vh;
+    cursor: move;
+    margin: auto;
+}
+
+#vert {
+    position: relative;
+    height: 24vh;
+    cursor: move;
+    margin: auto;
+}
+
+#jaune {
+    position: relative;
+    height: 16vh;
+    cursor: move;
+    margin: auto;
+}
+
+#orange {
+    position: relative;
+    height: 24vh;
+    cursor: move;
+    margin: auto;
+}
+
+#bleu_c {
+    position: relative;
+    width: 40vh;
+    height: 8vh;
+    cursor: move;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.cache {
+    filter: opacity(0);
+}
+
+.disappear {
+    filter: opacity(1);
+    animation: disappear 10s forwards;
+}
+
+@keyframes disappear {
+    15%{
+        filter: opacity(1);
+    }
+    100%{
+        filter: opacity(0);
+    }
+}
+
+
+/* stars  */
+
+@function create-stars($n) {
+    $stars: "#{random($starFieldWidth*2)}px #{random($starFieldHeight*2)}px #FFF";
+
+    @for $i from 2 through $n {
+      $stars: "#{$stars} , #{random($starFieldWidth*2)}px #{random($starFieldHeight*2)}px #FFF";
+    }
+    @return unquote($stars);
+}
+
+@mixin star-template($numStars, $starSize, $scrollSpeed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: create-stars($numStars);
+    animation: animStar $scrollSpeed linear infinite;
+    &:after {
+        content: " ";
+        top: -$starStartOffset;
+        width: $starSize;
+        height: $starSize;
+        border-radius: 50%;
+        position: absolute;
+        background: transparent;
+        box-shadow: create-stars($numStars);
+    }
+}
+
+@mixin shooting-star-template($numStars, $starSize, $speed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1)
+    );
+    animation: animShootingStar $speed linear infinite;
+}
+
+.stars {
+    @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+}
+
+.stars2 {
+    @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+}
+
+.stars3 {
+    @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+}
+
+.comet {
+    @include shooting-star-template($numComet, 5px, 10s);
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+    transform: translateY(-#{$starFieldHeight}px)
+        translateX(-#{$starFieldWidth}px);
+    }
+}
+
+@keyframes animShootingStar {
+    from {
+        transform: translateY(0px) translateX(0px) rotate(-45deg);
+        opacity: 1;
+        height: 5px;
+    }
+    to {
+        transform: translateY(-#{$starFieldHeight}px)
+        translateX(-#{$starFieldWidth}px) rotate(-45deg);
+        opacity: 1;
+        height: 800px;
+    }
+}
+
+.button {
+    display: inline-block;
+    border-radius: 20px;
+    background: radial-gradient(#cd0000 0%, #b70000 30%, #ae0000 50%, #830000 70%, rgb(75, 0, 0) 100%);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 2px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background: radial-gradient(#cd0000 0%, #c11717 50%, #cc3333 70%, rgb(210, 68, 68) 80%,  rgb(210, 77, 77) 100%);
+    box-shadow: 0px 0px 20px 10px rgba(202, 180, 180, 0.6);  
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;  
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

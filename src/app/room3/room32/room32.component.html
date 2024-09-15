@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="rightCode" [ngStyle]="{display:pieceDeb.salle32? 'flex':'none'}">
+        <p class="leftCode">X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</p>
+        <img class="p1" src="/assets/2D/12_jaune.png" />
+        <img class="p2" src="/assets/2D/12_violet.png" />
+    </div>
+    <div class="screen" (click)="showScreen()"></div>
+    <div class="boulette" (click)="showCode()"></div>
+    <div class="back" [ngStyle]="{display:screen? 'flex':'none'}" (click)="hideScreen()"></div>
+    <div class="screenlock" [ngStyle]="{display:screen? 'flex':'none'}">
+        <img class="ecran" src="/assets/2D/ecran.png"/>
+        <input class="text" type="text" [(ngModel)]="text"/>
+        <div class="lock" (click)="showDesktop()"></div>
+    </div> 
+    <div class="back" [ngStyle]="{display:desktop? 'flex':'none'}" (click)="hideDesktop()"></div>
+    <div class="desktop" [ngStyle]="{display:desktop? 'flex':'none'}">
+        <img class="bureau" src="/assets/2D/bureau.png" (click)="hidePhoto()"/>
+        <div class="ff" (click)="showFf()"></div>
+        <div class="noel" (click)="showNoel()"></div>
+        <div class="pieces" (click)="win()"></div>
+        <div class="shrek" (click)="showShrek()"></div>
+        <div class="lol" (click)="showLol()"></div>
+        <img *ngIf="photo != ''" class="photo" (click)="hidePhoto()" src="/assets/2D/{{photo}}.jpg"/>
+    </div> 
+    <div class="back" [ngStyle]="{display:hie? 'flex':'none'}" (click)="hideCode()"></div>
+    <div class="code" [ngStyle]="{display:hie? 'flex':'none'}">
+        <img src="/assets/2D/hieroglyphes.png"/>
+    </div> 
+    <img class="flecheRet" src="/assets/fleche_ar.png" (click)="previousRoom()" />
+</div>

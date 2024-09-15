@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <div class="piece3D">
+                <piece3D fName="5" [distance]=200 [taille]=250 [rotationAngle]=0.01 id="welcome" [cameraType]=1></piece3D>
+            </div>            
+            <div class="floating">
+                <img class="logo" src="./assets/logo.png" />
+            </div>
+            <div class="piece3D">
+                <piece3D fName="1" [distance]=200 [taille]=250 [rotationAngle]=-0.01 id="rules" [cameraType]=1></piece3D>
+            </div>
+        </div>
+        <div class="body">
+            <button class="button" routerLink="room2" (click)="jouerClick()"><span>JOUER </span></button>
+            <div class="piece3D">
+                <br/>
+                <piece3D fName="2" [distance]=200 [taille]=250 [rotationAngle]=0.01 id="team" [cameraType]=1></piece3D>
+            </div>
+        </div>
+    </div>
+    <div class="middleLayer floating">
+        <div class="vide"></div> 
+        <div class="vide"></div>  
+        <div class="piece3D">
+            <piece3D fName="4" [distance]=220 [taille]=150 [rotationAngle]=-0.005></piece3D>
+        </div>  
+        <div class="vide"></div> 
+        <div class="piece3D">
+            <piece3D fName="3" [distance]=130 [taille]=125 [rotationAngle]=-0.01></piece3D>
+        </div>    
+        <div class="piece3D">
+            <piece3D fName="7" [distance]=150 [taille]=125 [rotationAngle]=-0.005></piece3D>
+        </div> 
+        <div class="vide"></div>    
+        <div class="vide"></div>    
+        <div class="vide"></div>    
+        <div class="piece3D">
+            <piece3D fName="6" [distance]=150 [taille]=125 [rotationAngle]=0.01></piece3D>
+        </div>   
+        <div class="vide"></div> 
+        <div class="piece3D">
+            <piece3D fName="3" [distance]=150 [taille]=125 [rotationAngle]=0.01></piece3D>
+        </div>   
+        <div class="vide"></div>  
+        <div class="piece3D">
+            <piece3D fName="8" [distance]=170 [taille]=125 [rotationAngle]=-0.01></piece3D>
+        </div>
+    </div>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="comet"></div>    
+    </div>
+</div>

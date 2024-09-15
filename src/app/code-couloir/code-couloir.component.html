@@ -1,0 +1,22 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+<div class="page">
+    <div class="code" (click)="$event.stopPropagation()" (keypress)="onKeyClick($event)">
+        <div class="screen">
+            <input type="number" [(ngModel)]="codeTape" (ngModelChange)="codeTapeChanged()" (keypress)="$event.preventDefault()">
+        </div>
+        <div class="digits">
+            <div class="digit" (click)="addChiffre(1)">1</div>
+            <div class="digit" (click)="addChiffre(2)">2</div>
+            <div class="digit" (click)="addChiffre(3)">3</div>
+            <div class="digit" (click)="addChiffre(4)">4</div>
+            <div class="digit" (click)="addChiffre(5)">5</div>
+            <div class="digit" (click)="addChiffre(6)">6</div>
+            <div class="digit" (click)="addChiffre(7)">7</div>
+            <div class="digit" (click)="addChiffre(8)">8</div>
+            <div class="digit" (click)="addChiffre(9)">9</div>
+            <div class="digit" (click)="addChiffre(0)">0</div>
+            <div class="valider" (click)="validerClick()">Valider</div>
+            <div class="annuler" (click)="annulerClick()">Annuler</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,234 @@
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+$starStartOffset: 600px;
+
+$starOneScrollDuration: 100s;
+$starTwoScrollDuration: 125s;
+$starThreeScrollDuration: 175s;
+$numStarOneStars: 5600;
+$numStarTwoStars: 13600;
+$numStarThreeStars: 1600;
+$numComet: 10;
+
+.container {
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.content {
+    background-image: url("/assets/Rooms/room21.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.background {
+    background: radial-gradient(#210068, rgb(10, 0, 30));
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.flecheRet {
+  position: absolute;
+  height: 5vh;
+  top: 90vh;
+  left: 47.5%;
+}
+
+.flecheRet:hover {
+  cursor: URL("/assets/cursor.png"), auto;
+}
+
+.leftCode {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(#5a5a5a, 0.8);
+  border-radius: 10px;
+  height: 10vh;
+  width: 20vw;
+  top: 3vh;
+  left: 40vw;
+}
+
+.orange {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 5%;
+}
+
+.rouge {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  height: 67%;
+}
+
+.rightCode {
+  position: absolute;
+  left: 62%;
+  font-size: 35px;
+  top: 25%;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.cadre {
+  position: absolute;
+  background-color: rgba(#C1C1C1, 0.5);
+  height: 20vh;
+  width: 20vw;
+  top: 15vh;
+  left: 40vw;
+  cursor: default;
+  filter: brightness(80%);
+}
+
+.code {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  height: 70vh;
+  width: 70vw;
+  top: 15vh;
+  left: 15vw;
+}
+
+.back {
+  position: absolute;
+  display: flex;
+  background-color: rgb(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  top: 15vh;
+}
+
+.color {
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  top: 15vh;
+}
+
+.number {
+  caret-color: transparent;
+  height: 150px;
+  width: 110px;
+  margin: 50px;
+  font-size: 100px;
+  padding-left: 40px;
+  padding-right: 0px;
+}
+
+/* stars  */
+
+@function create-stars($n) {
+    $stars: "#{random($starFieldWidth*2)}px #{random($starFieldHeight*2)}px #FFF";
+
+    @for $i from 2 through $n {
+      $stars: "#{$stars} , #{random($starFieldWidth*2)}px #{random($starFieldHeight*2)}px #FFF";
+    }
+    @return unquote($stars);
+  }
+
+  @mixin star-template($numStars, $starSize, $scrollSpeed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: create-stars($numStars);
+    animation: animStar $scrollSpeed linear infinite;
+    &:after {
+      content: " ";
+      top: -$starStartOffset;
+      width: $starSize;
+      height: $starSize;
+      border-radius: 50%;
+      position: absolute;
+      background: transparent;
+      box-shadow: create-stars($numStars);
+    }
+  }
+
+  @mixin shooting-star-template($numStars, $starSize, $speed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+    animation: animShootingStar $speed linear infinite;
+  }
+
+  .stars {
+    @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+  }
+
+  .stars2 {
+      @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+  }
+  .stars3 {
+      @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+  }
+  .comet {
+      @include shooting-star-template($numComet, 5px, 10s);
+  }
+
+  @keyframes animStar {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-#{$starFieldHeight}px)
+          translateX(-#{$starFieldWidth}px);
+      }
+  }
+
+  @keyframes animShootingStar {
+      from {
+        transform: translateY(0px) translateX(0px) rotate(-45deg);
+        opacity: 1;
+        height: 5px;
+      }
+      to {
+        transform: translateY(-#{$starFieldHeight}px)
+          translateX(-#{$starFieldWidth}px) rotate(-45deg);
+        opacity: 1;
+        height: 800px;
+      }
+  }

@@ -1,0 +1,54 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+<div class="container">
+    <div class="content">
+        <div class="colG floating" (drop)="dropOut($event)" (dragover)="allowDropOut($event)">
+            <img id="bleu_f" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/3_bleu_fonce.png"/>
+            <img id="rouge" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/9_rouge.png"/>
+            <img id="rose" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/18_rose.png"/>
+            <img id="violet" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/12_violet.png"/>
+        </div>
+        <div class="colD floating" (drop)="dropOut($event)" (dragover)="allowDropOut($event)">
+            <img id="vert" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/11_vert1.png"/>
+            <img id="jaune" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/12_jaune.png"/>
+            <img id="orange" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/18_orange.png"/>
+            <img id="bleu_c" draggable="true" (dragstart)="drag($event)" (dragend)="dragEnd($event)" src="/assets/2D/15_bleu_clair1.png"/>
+        </div>
+        <div id="msgfin" class="hide msgfin"><p>Merci d'avoir participé ! On espère que vous avez passé un bon moment et que vous n'hésiterez pas à partager ce jeu avec votre entourage.</p>
+            <button class="button" routerLink=""><span>Accueil</span></button>
+        </div>
+        <div id="puzzleBoard" class="puzzleBoard">
+          <div class="par">
+            <p>
+              Félicitations !<br/>
+              Vous êtes arrivé.e à la dernière salle.<br/>
+              On ne peut pas vous dire au revoir avant de vous faire jouer une dernière partie.
+              C'est pour cela qu'on vous propose de remplir la grille devant vous avec toutes les pièces à votre disposition.<br/>
+              Faites-le, une surprise vous attend à la fin de ce parcours.
+              <br/><br/>
+              Nous vous souhaitons bon courage pour ce dernier jeu.<br/>
+              Et profitez bien du cadeau ;)
+            </p>
+          </div>
+            <div id="grille" class="grille" draggable="false" (drop)="drop($event)" (dragover)="allowDrop($event)">
+            </div>
+        </div>
+        <div id="ecranCine" class="hide">
+            <div id="rideau">
+                <img id="orange2" class="cache" src="/assets/2D/r_orange.png">
+                <img id="rouge2" class="cache" src="/assets/2D/i_rouge.png">
+                <img id="bleu_f2" class="cache" src="/assets/2D/c_bleu.png">
+                <img id="vert2" class="cache" src="/assets/2D/k_vert.png">
+                <img id="rose2" class="cache" src="/assets/2D/r_rose.png">
+                <img id="bleu_c2" class="cache" src="/assets/2D/o_bleu.png">
+                <img id="jaune2" class="cache" src="/assets/2D/l_jaune.png">
+                <img id="violet2" class="cache" src="/assets/2D/l_violet.png">
+            </div>
+        </div>
+    </div>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="comet"></div>
+    </div>
+</div>

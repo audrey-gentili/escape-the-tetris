@@ -1,0 +1,10 @@
+<div class="container">
+    <img class="fleche3" src="/assets/fleche_av.png" (click)="nextRoom()"/>
+    <div class="{{porte}}"><img src="/assets/2D/{{porte}}.png" (click)="nextRoom()"/></div>
+    <div class="room21" (click)="leftRoom()"></div><img class="fleche1" (click)="leftRoom()" src="/assets/fleche_g.png"/>
+    <div class="room22" (click)="rightRoom()"></div><img class="fleche2" (click)="rightRoom()" src="/assets/fleche_d.png"/>
+    <img class="fleche4" src="/assets/fleche_ar.png" (click)="previousRoom()"/>
+</div>
+<div id="codeC1" (click)="hideCode()" class="hide">
+    <app-code-couloir nextRoom="/room3" [codePassage]=189311 id="codeC1"></app-code-couloir>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="comet"></div>
+    </div>
+    <div class="content">
+        <div class="leftCode" [ngStyle]="{display:pieceDeb.salle21? 'flex':'none'}">
+            <img class="orange" src="/assets/2D/18_orange.png" />
+            <img class="rouge" src="/assets/2D/9_rouge.png" />
+            <p class="rightCode">X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</p>
+        </div>
+        <img src="/assets/2D/poster.png" class="cadre" (click)="showCode()" />
+        <img class="flecheRet" src="/assets/fleche_ar.png" (click)="previousRoom()">
+        <div class="back" [ngStyle]="{display:show? 'flex':'none'}" (click)="hideCode()"></div>
+        <div class="code" [ngStyle]="{display:show? 'flex':'none'}">
+            <div class="colors">
+                <div class="color" style="background-color: #1417cc;"></div>
+                <div class="color" style="background-color: #d41e27;"></div>
+                <div class="color" style="background-color: #1ab91a;"></div>
+                <div class="color" style="background-color: #dc571e;"></div>
+            </div>
+            <br/>
+            <div class="numbers">
+                <input type="number" class="number" (change)="verifyCode()" [(ngModel)]="n1" min="1" max="9"/>
+                <input type="number" class="number" (change)="verifyCode()" [(ngModel)]="n2" min="1" max="9"/>
+                <input type="number" class="number" (change)="verifyCode()" [(ngModel)]="n3" min="1" max="9"/>
+                <input type="number" class="number" (change)="verifyCode()" [(ngModel)]="n4" min="1" max="9"/>
+            </div>
+        </div>
+    </div>
+</div>

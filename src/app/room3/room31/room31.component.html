@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="leftCode" [ngStyle]="{display:pieceDeb.salle31? 'flex':'none'}">
+        <img class="p1" src="/assets/2D/18_rose.png" />
+        <img class="p2" src="/assets/2D/15_bleu_clair1.png" />
+        <p class="rightCode">&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X</p>
+    </div>
+    <button class="button" (click)="commencer()" [hidden]="hiddenButton">Commencer</button>
+    <div id="GH"></div>
+    <div>
+        <video id="motion1" class="hide">
+            <source src="/assets/motion/motion1.mp4">
+        </video>
+    </div>
+    <div>
+        <video id="motion2" class="hide">
+            <source src="/assets/motion/motion2.mp4">
+        </video>
+    </div>
+    <img class="flecheRet" src="/assets/black-arrows/fleche_ar.png" (click)="previousRoom()">
+</div>
+<img id="flecheD" class="hide" src="/assets/guitar_hero/fleche_droite.png">
+<img id="flecheH" class="hide" src="/assets/guitar_hero/fleche_haut.png">
+<img id="flecheG" class="hide" src="/assets/guitar_hero/fleche_gauche.png">
+<img id="flecheB" class="hide" src="/assets/guitar_hero/fleche_bas.png">

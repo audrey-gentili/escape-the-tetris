@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="rightCode" [ngStyle]="{display:pieceDeb.salle22? 'flex':'none'}">
+        <p class="leftCode">X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</p>
+        <img class="p1" src="/assets/2D/3_bleu_fonce.png" />
+        <img class="p2" src="/assets/2D/11_vert.png" />
+    </div>
+    <div *ngIf="color != ''"><img class="color" src="/assets/3D/room22/{{color}}.png"></div>
+    <p class="text">{{text}}</p>
+    <button class="button" (click)="commencerClick()"  [hidden]="!afficheBouton">Commencer</button>
+    <div class="clicable jaune" id="jaune" (click)="clic('jaune')"></div>
+    <div class="clicable rouge" id="rouge" (click)="clic('rouge')"></div>
+    <div class="clicable vert" id="vert" (click)="clic('vert')"></div>
+    <div class="clicable bleu" id="bleu" (click)="clic('bleu')"></div>
+    <div class="clicable violet" id="violet" (click)="clic('violet')"></div>
+    <img class="flecheRet" src="/assets/fleche_ar.png" (click)="previousRoom()">
+</div>
